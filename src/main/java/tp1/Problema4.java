@@ -50,8 +50,7 @@ public class Problema4 {
         System.out.println("Caso 3 Esperado: 3 | Obtenido: " + r3);
         assert r3 == 3 : "Fallo P4 - caso 3";
 
-        // Sin ningún 'a': resultado 0
-        long r4 = contarFotografias("fffeeee", 1, 5);
+    long r4 = contarFotografias("fffeeee", 1, 5);
         System.out.println("Sin 'a' Esperado: 0 | Obtenido: " + r4);
         assert r4 == 0 : "Fallo P4 - sin 'a'";
 

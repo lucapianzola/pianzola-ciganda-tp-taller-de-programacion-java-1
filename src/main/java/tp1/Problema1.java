@@ -35,12 +35,12 @@ public class Problema1 {
         System.out.println("Salida esperada: hola | Obtenida: " + resultado);
         assert "hola".equals(resultado) : "Fallo en el Problema 1";
 
-        // N=1: "el" aparece una vez, todas las palabras compiten
+        
         String r2 = palabraMasUsada("uno dos dos tres tres tres", 1);
         System.out.println("Salida esperada: tres | Obtenida: " + r2);
         assert "tres".equals(r2) : "Fallo en el Problema 1 - caso 2";
 
-        // texto vacío
+        
         String r3 = palabraMasUsada("", 1);
         System.out.println("Texto vacío esperado: null | Obtenido: " + r3);
         assert r3 == null : "Fallo en el Problema 1 - caso vacío";

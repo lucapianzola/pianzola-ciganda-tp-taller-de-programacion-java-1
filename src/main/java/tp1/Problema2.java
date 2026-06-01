@@ -31,7 +31,7 @@ public class Problema2 {
     }
 
     public static void main(String[] args) {
-        // fib: 1, 1, 2, 3, 5, 8  =>  fib(0)=1, fib(1)=1, fib(2)=2, fib(3)=3, fib(4)=5, fib(5)=8
+        
         assert fibonacci(0) == 1  : "Fallo fib(0)";
         assert fibonacci(1) == 1  : "Fallo fib(1)";
         assert fibonacci(2) == 2  : "Fallo fib(2)";

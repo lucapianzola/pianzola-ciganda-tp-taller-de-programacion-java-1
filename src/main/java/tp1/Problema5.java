@@ -46,7 +46,7 @@ public class Problema5 {
 
             if (celda == 'S') return dist;
 
-            // Movimiento adyacente
+            
             for (int[] d : dirs) {
                 int nr = r + d[0], nc = c + d[1];
                 if (nr >= 0 && nr < F && nc >= 0 && nc < C
@@ -56,7 +56,7 @@ public class Problema5 {
                 }
             }
 
-            // Movimiento por portal (costo 1)
+            
             if (celda >= 'a' && celda <= 'z' && !portalesUsados.contains(celda)) {
                 portalesUsados.add(celda);
                 for (int[] p : portales.get(celda)) {
@@ -67,7 +67,7 @@ public class Problema5 {
                 }
             }
         }
-        return -1; // sin solución
+    return -1;
     }
 
     public static void main(String[] args) {
