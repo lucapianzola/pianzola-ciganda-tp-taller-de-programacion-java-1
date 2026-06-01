@@ -1,15 +1,11 @@
 ========================================
-🛠️  Compilando el proyecto con Java nativo...
-========================================
-
-========================================
-🚀 Ejecutando Casos de Prueba - TP1
+Ejecutando Casos de Prueba - TP1
 ========================================
 
 >>> Ejecutando Problema 1 <<<
 Salida esperada: hola | Obtenida: hola
 Salida esperada: tres | Obtenida: tres
-Texto vac�o esperado: null | Obtenido: null
+Texto vacío esperado: null | Obtenido: null
 Test P1 superado.
 
 >>> Ejecutando Problema 2 <<<
@@ -19,8 +15,8 @@ fib(1000) = 70330367711422815821835254877183549770181269836358732742604905087154
 Test P2 superado.
 
 >>> Ejecutando Problema 3 <<<
-�rbol v�lido  Esperado: true  | Obtenido: true
-�rbol inv�lido Esperado: false | Obtenido: false
+Árbol válido  Esperado: true  | Obtenido: true
+Árbol inválido Esperado: false | Obtenido: false
 Test P3 superado.
 
 >>> Ejecutando Problema 4 <<<
@@ -33,10 +29,9 @@ Test P4 superado.
 >>> Ejecutando Problema 5 <<<
 Caso 1 Esperado: 2 | Obtenido: 2
 Caso 2 (portal) Esperado: 4 | Obtenido: 4
-Caso 3 sin soluci�n Esperado: -1 | Obtenido: -1
+Caso 3 sin solución Esperado: -1 | Obtenido: -1
 Test P5 superado.
 
 ========================================
-✅ ¡Todos los ejercicios finalizaron!
-📄 Podés revisar la salida tranquilamente en: resultados.txt
+¡Todos los ejercicios finalizaron!
 ========================================
