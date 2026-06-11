@@ -3,8 +3,8 @@ package tp1;
 import java.math.BigInteger;
 
 /**
- * Estrategia: Solución iterativa con tres variables (prev2, prev1, current) que 
- * garantiza uso de memoria O(1). El tipo long cubre hasta fib(90). 
+ * Estrategia: Solución iterativa con tres variables (prev2, prev1, current)
+ * El tipo long cubre hasta fib(90).
  * Se sigue la definición del PDF: fib(0)=1, fib(1)=1.
  * Para N > 90 se provee una extensión usando BigInteger.
  * Complejidad: O(N).
@@ -16,6 +16,7 @@ public class Problema2 {
         if (n == 0 || n == 1) return 1;
 
         long prev2 = 1, prev1 = 1, current = 0;
+        // Calculamos el siguiente valor sumando los dos anteriores
         for (int i = 2; i <= n; i++) {
             current = prev1 + prev2;
             prev2 = prev1;
@@ -29,6 +30,7 @@ public class Problema2 {
         if (n == 0 || n == 1) return BigInteger.ONE;
 
         BigInteger prev2 = BigInteger.ONE, prev1 = BigInteger.ONE, current = BigInteger.ZERO;
+        // BigInteger permite manejar resultados que superan el límite de long (N > 90)
         for (int i = 2; i <= n; i++) {
             current = prev1.add(prev2);
             prev2 = prev1;

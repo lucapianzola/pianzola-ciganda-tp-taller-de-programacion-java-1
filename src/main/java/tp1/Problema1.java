@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Estrategia: Se usa String.split() con una expresión regular para tokenizar el texto
- * eliminando cualquier carácter no alfabético (incluyendo acentos y ñ). 
+ * Estrategia: Se usa String.split() con una expresión regular para dividir el texto
+ * eliminando cualquier carácter no alfabético.
  * Las frecuencias se acumulan en un HashMap, actualizando el máximo en la misma pasada.
- * Complejidad: O(N) en tiempo y espacio.
+ * Complejidad: O(N).
  */
 public class Problema1 {
 
@@ -15,6 +15,7 @@ public class Problema1 {
         if (texto == null || texto.isEmpty()) return null;
 
         Map<String, Integer> frecuencias = new HashMap<>();
+        // Dividimos el texto en palabras eliminando caracteres no alfabéticos
         String[] palabras = texto.split("[^a-zA-ZáéíóúÁÉÍÓÚñÑ]+");
 
         String maxPalabra = null;
@@ -23,6 +24,7 @@ public class Problema1 {
         for (String p : palabras) {
             if (p.length() >= N) {
                 p = p.toLowerCase();
+                // Actualizamos la frecuencia y mantenemos registro de la palabra más usada
                 int count = frecuencias.getOrDefault(p, 0) + 1;
                 frecuencias.put(p, count);
 

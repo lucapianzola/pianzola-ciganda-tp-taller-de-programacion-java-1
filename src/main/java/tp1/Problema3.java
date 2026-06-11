@@ -24,8 +24,10 @@ public class Problema3 {
 
     private static boolean esValido(Node node, Integer min, Integer max) {
         if (node == null) return true;
+        // El valor del nodo debe estar estrictamente dentro del rango (min, max)
         if (min != null && node.data <= min) return false;
         if (max != null && node.data >= max) return false;
+        // Al bajar al hijo izquierdo el máximo es el nodo actual, al derecho el mínimo es el nodo actual
         return esValido(node.left, min, node.data) && esValido(node.right, node.data, max);
     }
 

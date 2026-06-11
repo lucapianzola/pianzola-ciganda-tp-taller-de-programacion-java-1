@@ -52,7 +52,7 @@ public class Problema5 {
 
             if (celda == 'S') return dist;
 
-            
+            // Exploramos los 4 movimientos adyacentes posibles (arriba, abajo, izquierda, derecha)
             for (int[] d : dirs) {
                 int nr = r + d[0], nc = c + d[1];
                 if (nr >= 0 && nr < F && nc >= 0 && nc < C
@@ -62,7 +62,7 @@ public class Problema5 {
                 }
             }
 
-            
+            // Si la celda es un portal (a-z), saltamos a todos sus extremos con costo 1
             if (celda >= 'a' && celda <= 'z' && !portalesUsados.contains(celda)) {
                 portalesUsados.add(celda);
                 for (int[] p : portales.get(celda)) {

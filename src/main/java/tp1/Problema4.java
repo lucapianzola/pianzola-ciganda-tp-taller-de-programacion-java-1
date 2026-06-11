@@ -13,6 +13,7 @@ public class Problema4 {
         int[] prefF = new int[n + 1];
         int[] prefE = new int[n + 1];
 
+        // Construimos arreglos de sumas acumuladas para contar 'f' y 'e' en rangos
         for (int i = 0; i < n; i++) {
             prefF[i + 1] = prefF[i] + (A.charAt(i) == 'f' ? 1 : 0);
             prefE[i + 1] = prefE[i] + (A.charAt(i) == 'e' ? 1 : 0);
@@ -21,6 +22,7 @@ public class Problema4 {
         long total = 0;
         for (int i = 0; i < n; i++) {
             if (A.charAt(i) == 'a') {
+                // Al encontrar una 'a', buscamos 'f' y 'e' en los rangos permitidos [X, Y]
                 int leftStart = Math.max(0, i - Y);
                 int leftEnd   = i - X;
                 int rightStart = i + X;
