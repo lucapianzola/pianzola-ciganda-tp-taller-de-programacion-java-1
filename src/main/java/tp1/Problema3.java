@@ -1,5 +1,11 @@
 package tp1;
 
+/**
+ * Estrategia: Recorrido recursivo en pre-orden que propaga límites min y max 
+ * actualizables hacia cada subárbol. Esto verifica que todo nodo cumpla la 
+ * propiedad BST respecto a todos sus ancestros.
+ * Complejidad: O(N).
+ */
 public class Problema3 {
 
     public static class Node {

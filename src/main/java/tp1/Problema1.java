@@ -3,6 +3,12 @@ package tp1;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Estrategia: Se usa String.split() con una expresión regular para tokenizar el texto
+ * eliminando cualquier carácter no alfabético (incluyendo acentos y ñ). 
+ * Las frecuencias se acumulan en un HashMap, actualizando el máximo en la misma pasada.
+ * Complejidad: O(N) en tiempo y espacio.
+ */
 public class Problema1 {
 
     public static String palabraMasUsada(String texto, int N) {

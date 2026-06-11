@@ -1,5 +1,11 @@
 package tp1;
 
+/**
+ * Estrategia: Uso de arreglos de suma de prefijos sobre 'f' y 'e'. 
+ * Al iterar sobre cada 'a', se obtiene en O(1) cuántas 'f' y 'e' hay en los 
+ * rangos [i-Y, i-X] e [i+X, i+Y]. Se cuentan combinaciones f-a-e y e-a-f.
+ * Complejidad: O(N).
+ */
 public class Problema4 {
 
     public static long contarFotografias(String A, int X, int Y) {

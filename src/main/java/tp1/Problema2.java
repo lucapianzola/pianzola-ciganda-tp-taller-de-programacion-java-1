@@ -2,6 +2,13 @@ package tp1;
 
 import java.math.BigInteger;
 
+/**
+ * Estrategia: Solución iterativa con tres variables (prev2, prev1, current) que 
+ * garantiza uso de memoria O(1). El tipo long cubre hasta fib(90). 
+ * Se sigue la definición del PDF: fib(0)=1, fib(1)=1.
+ * Para N > 90 se provee una extensión usando BigInteger.
+ * Complejidad: O(N).
+ */
 public class Problema2 {
 
     public static long fibonacci(int n) {

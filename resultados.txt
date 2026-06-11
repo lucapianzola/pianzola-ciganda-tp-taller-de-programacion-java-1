@@ -1,37 +1,67 @@
 ========================================
+Inicio de compilacion con Maven...
+========================================
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< tp1:pianzola-ciganda-tp1 >----------------------
+[INFO] Building pianzola-ciganda-tp1 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ pianzola-ciganda-tp1 ---
+[INFO] Deleting /home/tc/IdeaProjects/pianzola-ciganda-tp-taller-de-programacion-java-1/target
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ pianzola-ciganda-tp1 ---
+[INFO] skip non existing resourceDirectory /home/tc/IdeaProjects/pianzola-ciganda-tp-taller-de-programacion-java-1/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ pianzola-ciganda-tp1 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 5 source files with javac [debug target 17] to target/classes
+[WARNING] location of system modules is not set in conjunction with -source 17
+  not setting the location of system modules may lead to class files that cannot run on JDK 17
+    --release 17 is recommended instead of -source 17 -target 17 because it sets the location of system modules automatically
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.449 s
+[INFO] Finished at: 2026-06-10T21:54:26-03:00
+[INFO] ------------------------------------------------------------------------
+
+========================================
 Ejecutando Casos de Prueba - TP1
 ========================================
 
->>> Ejecutando Problema 1 <<<
+>>> Ejecutando problema 1 <<<
 Salida esperada: hola | Obtenida: hola
 Salida esperada: tres | Obtenida: tres
 Texto vacío esperado: null | Obtenido: null
 Test P1 superado.
 
->>> Ejecutando Problema 2 <<<
+>>> Ejecutando problema 2 <<<
 fib(5)  Esperado: 8  | Obtenido: 8
 fib(10) Esperado: 89 | Obtenido: 89
 fib(1000) = 70330367711422815821835254877183549770181269836358732742604905087154537118196933579742249494562611733487750449241765991088186363265450223647106012053374121273867339111198139373125598767690091902245245323403501
 Test P2 superado.
 
->>> Ejecutando Problema 3 <<<
+>>> Ejecutando problema 3 <<<
 Árbol válido  Esperado: true  | Obtenido: true
 Árbol inválido Esperado: false | Obtenido: false
 Test P3 superado.
 
->>> Ejecutando Problema 4 <<<
+>>> Ejecutando problema 4 <<<
 Caso 1 Esperado: 1 | Obtenido: 1
 Caso 2 Esperado: 0 | Obtenido: 0
 Caso 3 Esperado: 3 | Obtenido: 3
 Sin 'a' Esperado: 0 | Obtenido: 0
 Test P4 superado.
 
->>> Ejecutando Problema 5 <<<
-Caso 1 Esperado: 2 | Obtenido: 2
-Caso 2 (portal) Esperado: 4 | Obtenido: 4
-Caso 3 sin solución Esperado: -1 | Obtenido: -1
+>>> Ejecutando problema 5 <<<
+Caso 1 Esperado: 4 | Obtenido: 4
+Caso 2 Esperado: -1 | Obtenido: -1
+Caso 3 Esperado: 2 | Obtenido: 2
+Caso 4 Esperado: 13 | Obtenido: 13
 Test P5 superado.
 
 ========================================
-¡Todos los ejercicios finalizaron!
+Todos los ejercicios finalizaron
 ========================================

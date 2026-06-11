@@ -9,6 +9,12 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
+/**
+ * Estrategia: Algoritmo BFS para garantizar el camino más corto. 
+ * Las ubicaciones de cada portal se pre-calculan. Al pisar un portal, se encolan 
+ * todos sus destinos con costo dist + 1. Cada tipo de portal se activa una sola vez.
+ * Complejidad: O(F x C).
+ */
 public class Problema5 {
 
     public static int resolverLaberinto(char[][] mapa) {
@@ -71,44 +77,47 @@ public class Problema5 {
     }
 
     public static void main(String[] args) {
-        // Caso 1: camino directo sin portales
-        // . . .
-        // . E .
-        // . . S
-        // Camino más corto: E(1,1) -> (1,2) -> (2,2) -> S  distancia 3... o (2,1)->(2,2) distancia 2?
-        // E está en (1,1), S en (2,2). Distancia Manhattan = 2 pasos.
+        // Ejemplo 1 del PDF: 4
         char[][] mapa1 = {
+            {'E', '.', '.'},
             {'.', '.', '.'},
-            {'.', 'E', '.'},
             {'.', '.', 'S'}
         };
         int r1 = resolverLaberinto(mapa1);
-        System.out.println("Caso 1 Esperado: 2 | Obtenido: " + r1);
-        assert r1 == 2 : "Fallo P5 - caso 1";
+        System.out.println("Caso 1 Esperado: 4 | Obtenido: " + r1);
+        assert r1 == 4 : "Fallo P5 - caso 1";
 
-        // Caso 2: laberinto con portal
-        // E a . #
-        // # # . #
-        // S . a .
-        // Portal 'a' conecta (0,1) con (2,2). Camino: E->a(0,1)->a(2,2)->S(2,0)?
-        // Desde (2,2) a S(2,0): 2 pasos. Total: 1(E->a) + 1(portal) + 2 = 4
+        // Ejemplo 2 del PDF: -1
         char[][] mapa2 = {
-            {'E', 'a', '.', '#'},
-            {'#', '#', '.', '#'},
-            {'S', '.', 'a', '.'}
+            {'E', '#', '.'},
+            {'.', '#', '.'},
+            {'.', '#', 'S'}
         };
         int r2 = resolverLaberinto(mapa2);
-        System.out.println("Caso 2 (portal) Esperado: 4 | Obtenido: " + r2);
-        assert r2 == 4 : "Fallo P5 - caso 2";
+        System.out.println("Caso 2 Esperado: -1 | Obtenido: " + r2);
+        assert r2 == -1 : "Fallo P5 - caso 2";
 
-        // Caso 3: sin salida
+        // Ejemplo 3 del PDF: 2
         char[][] mapa3 = {
-            {'E', '#'},
-            {'#', 'S'}
+            {'E', '.', 'S'},
+            {'.', '.', '.'},
+            {'.', '.', 'S'}
         };
         int r3 = resolverLaberinto(mapa3);
-        System.out.println("Caso 3 sin solución Esperado: -1 | Obtenido: " + r3);
-        assert r3 == -1 : "Fallo P5 - caso 3";
+        System.out.println("Caso 3 Esperado: 2 | Obtenido: " + r3);
+        assert r3 == 2 : "Fallo P5 - caso 3";
+
+        // Ejemplo 4 del PDF: 13
+        char[][] mapa4 = {
+            {'S', '.', 'b', '#', 'b'},
+            {'#', '#', '#', '#', 'a'},
+            {'.', '.', 'E', '#', '#'},
+            {'c', '#', '#', '.', 'c'},
+            {'#', 'a', '.', '.', '.'}
+        };
+        int r4 = resolverLaberinto(mapa4);
+        System.out.println("Caso 4 Esperado: 13 | Obtenido: " + r4);
+        assert r4 == 13 : "Fallo P5 - caso 4";
 
         System.out.println("Test P5 superado.");
     }

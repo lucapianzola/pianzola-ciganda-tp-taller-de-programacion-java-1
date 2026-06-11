@@ -21,18 +21,18 @@ tp1-sistemas/
 
 ## Cómo ejecutar los tests
 
-Cada clase tiene un método `main` con sus casos de prueba. Para ejecutarlos con aserciones activas:
+Se provee un script `ejecutable.sh` que automatiza la compilación y ejecución de todos los problemas utilizando Maven. El script asegura que las aserciones de Java (`-ea`) estén activas.
 
 ```bash
-mvn compile
-java -ea -cp target/classes tp1.Problema1
-java -ea -cp target/classes tp1.Problema2
-java -ea -cp target/classes tp1.Problema3
-java -ea -cp target/classes tp1.Problema4
-java -ea -cp target/classes tp1.Problema5
+chmod +x ejecutable.sh
+./ejecutable.sh
 ```
 
-El flag `-ea` activa las aserciones nativas de Java (`assert`).
+Alternativamente, puede ejecutar cada problema individualmente con Maven:
+
+```bash
+mvn exec:java -Dexec.mainClass="tp1.Problema1" -q
+```
 
 ---
 
